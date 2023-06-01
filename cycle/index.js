@@ -42,11 +42,15 @@ power(base, exponent);
 */
 
 function factorial(number) {
- let factorialRes = 1;
- for (let i = 1; i <= number; i++) {
-  factorialRes = factorialRes * i;
+ if (number <= 0) {
+  console.log('feller');
+ } else {
+  let factorialRes = 1;
+  for (let i = 1; i <= number; i++) {
+   factorialRes = factorialRes * i;
+  }
+  console.log(factorialRes);
  }
- console.log(factorialRes);
 }
 
 const number = prompt('enter number');
