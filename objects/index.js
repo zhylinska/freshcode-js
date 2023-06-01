@@ -17,7 +17,7 @@ console.log(bulb.lightness)
 console.log(bulb['averege price']);
 bulb.on();
 
-const cat1 = { }
+const cat1 = { } //add new object
 const cat2 = object();
 const cat3 = new Object();
 
@@ -35,12 +35,22 @@ const person = {
         return 'sleep'
     },
 }
-
 person.hairColor = 'blue'; //change value
-
 delete person.eyeColor; //delete value or method
-
-
 console.log(person.eyeColor);
 console.log(person.run());
 
+
+person.friend = 'Vasia';//add value
+person['favourite film'] = 'avatar';
+
+person.cook = function () { //add method
+    return 'cook';
+}
+
+person.friend = {  //add values inside added object
+    name: 'Jack',
+    age: '12',
+}
+
+console.log(person.friend);
