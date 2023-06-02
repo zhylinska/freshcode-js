@@ -75,12 +75,10 @@ function Car(brand, model, volume, placeNumber, speed) {
     this.placeNumber = placeNumber;
     this.speed = speed;
     this.run = function () {
-        const run = (this.model + ' run');
-        return run;
+        return this.model + ' run';
     };
     this.stop = function () {
-        const stop = (this.model + ' stop');
-        return stop;
+        return this.model + ' stop';
     }
 }
 
@@ -88,5 +86,5 @@ const car1 = new Car('volvo', 'S60', 310, 5, 200);
 const car2 = new Car('toyota', 'yaris', 300, 5, 240)
 
 console.log(car1);
-console.log(car1.stop());
+console.log(car2.stop());
 
