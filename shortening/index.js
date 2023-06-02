@@ -64,3 +64,16 @@ for (let key in user) {
 }
  */
 
+const user = {
+    name: 'john',
+    surname: 'doe',
+    age: 35,
+    'favourite color': 'red',
+    avatar: 'https:///.....',
+}
+
+  for (let key in user) {
+    console.log(`*${key}* : "${user[key]}"`);}
+
+
+
