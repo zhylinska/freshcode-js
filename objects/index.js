@@ -47,6 +47,7 @@ person['favourite film'] = 'avatar';
 person.cook = function () { //add method
     return 'cook';
 }
+person.cook()
 
 person.friend = {  //add values inside added object
     name: 'Jack',

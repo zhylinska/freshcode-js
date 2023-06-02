@@ -49,7 +49,7 @@ function Book(name, author, year, price) {
 const book1 = new Book('name 1', 'author 1', 1951, 10.99);
 const book2 = new Book('name 2', 'author 2', 1990, 15.00);
 
-*/
+
 
 function Country(name, population, territory) {
     this.name = name;
@@ -66,3 +66,27 @@ const country1 = new Country('Ukraine', 40000000, 603000);
 const country2 = new Country('Germany', 83000000, 357000);
 
 console.log(country2.density());
+ */
+
+function Car(brand, model, volume, placeNumber, speed) {
+    this.brand = brand;
+    this.model = model;
+    this.volume = volume;
+    this.placeNumber = placeNumber;
+    this.speed = speed;
+    this.run = function () {
+        const run = (this.model + ' run');
+        return run;
+    };
+    this.stop = function () {
+        const stop = (this.model + ' stop');
+        return stop;
+    }
+}
+
+const car1 = new Car('volvo', 'S60', 310, 5, 200);
+const car2 = new Car('toyota', 'yaris', 300, 5, 240)
+
+console.log(car1);
+console.log(car1.stop());
+
