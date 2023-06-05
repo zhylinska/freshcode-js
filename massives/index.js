@@ -5,7 +5,7 @@ for(let i = 0; i < array.length; i++) {
         console.log(array[i]);
     }
 }
-*/
+
 
 const arr = [3, 6, 8, 2, 3, 5, 1, 3];
 
@@ -17,4 +17,17 @@ function sumArray(array) {
     return sum;
 }
 console.log(sumArray(arr));
+*/
 
+const arr = [3, 6, 8, 2, 3, 5, 1, 3];
+
+function findBiggest(array) {
+    let biggest = array[0];
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] > biggest) {
+            biggest = array[i];
+        }
+    }
+    return biggest;
+}
+   console.log(findBiggest(arr)) ;
