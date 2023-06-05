@@ -32,10 +32,16 @@ function findBiggest(array) {
     return biggest;
 }
    console.log(findBiggest(arr)) ;
-*/
+
 //concat
 const array = [1,2,3];
 const array2 = [3,4,5,6];
 const array3 = ['string1','string2'];
 array.concat(array2, array3);
 console.log(array.concat(array3, array2));
+ */
+
+//fill
+array.fill(value, start, end);   //start-end - not necessary
+const array = new Array(5);
+array.fill(1); // all the massive is filled with 1
