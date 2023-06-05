@@ -62,7 +62,7 @@ console.log(`${user.name}, ${user.surname}, ${user.age}, ${user['favourite color
 for (let key in user) {
     console.log(`${key} - ${user[key]}`);
 }
- */
+ 
 
 const user = {
     name: 'john',
@@ -74,6 +74,33 @@ const user = {
 
   for (let key in user) {
     console.log(`*${key}* : "${user[key]}"`);}
+ */
+
+const departmentSalary = {
+    HR: 20000,
+    drivers: 500,
+    development: 20000000,
+    marketing: undefined,
+    cleaning: 1000,
+}
+
+function sumCounting() {
+    let sum = 0;
+    for (let key in departmentSalary) {
+        if (departmentSalary[key] === undefined) {
+            sum = sum + 0;
+        } else {
+            sum = sum + departmentSalary[key];
+        }
+    }
+    return sum;
+}
+console.log(`the total sum is ${sumCounting()}`);
+
+   
+
+        
+
 
 
 

@@ -80,7 +80,7 @@ const car1 = new Car('volvo', 'S60', 310, 5, 200);
 const car2 = new Car('toyota', 'yaris', 300, 5, 240)
 console.log(car1);
 console.log(car2.stop());
- */
+
 
 
 function User(name, surname, age, email, password) {
@@ -107,3 +107,30 @@ const user2 = new User('Jerry', 'Green', 31, 'jerry@mail.ru', '12345');
 const passwordNew = prompt('enter password');
 console.log(user1.signIn(passwordNew));
 
+ */
+
+function Worker(name, surname, rate, days) {
+    this.name = name;
+    this.surname = surname;
+    this.rate = rate;
+    if(this.rate < 0) {
+        this.rate = 0;
+        console.log('rate is invalid');
+    }
+    else {
+        this.rate = rate;
+    }
+     this.days = days;
+    if(this.days > 31) {
+        this.days = 31;
+    }
+    else {
+        this.days = days;
+    }
+     this.getSalary = function () {
+        return `sum is ${this.days * this.rate}`;
+     }
+}
+const worker1 = new Worker('Ton', 'Grey', 15, 21);
+const worker2 = new Worker('Jerry', 'Green', 11, 20);
+console.log(worker2.getSalary());
