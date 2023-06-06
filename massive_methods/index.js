@@ -77,7 +77,32 @@ console.log(array.slice(-1));//last element
 const newUsers = users.slice(0);
  console.log(newUsers)
  
-*/
+
+//array.splice(start, deleteCount, item1, item2); //start - start of changings; deleteCount - amount od elements to be deleted, item1 - adding new
+
+const array = [2, 4, 7, 2, 12];
+array.splice(2, 1); //delete one el starting with 3 el. delete 7
+array.splice(2, 3); //delete 7, 2, 12
+array.splice(2); //delete all el starting with 2.  7, 2, 12
 
 
 
+//put after 2 string ''
+const array = [2, 4, 7, 2, 12];
+array.splice(2, 0, 'hello');// 2, 4, hello, 7, 2, 12
+
+
+const array = [1, 2, 3, 4, 5];
+console.log(array.slice(1, 2));
+
+const array2 = [1, 2, 3, 4];
+const newArray = array2.slice(1)
+
+
+const array3 = [1, 2, 3, 4, 5];
+console.log(array3.slice(1, 3));
+console.log(array3.splice(1, 0, 'w', 'tr-td'));
+console.log(array3.splice(6, 0, 'vv'));
+console.log(array3.splice(8, 0, 'aa')); //arr3.push('aa')
+
+ */
