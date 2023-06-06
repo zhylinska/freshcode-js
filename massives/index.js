@@ -53,7 +53,8 @@ console.log(array.includes('6'));//true
 //array.indexOf(value, fromIndex) - value - wht we are looking for, fromIndex - start index of seach
 const arrey = [1,2,3,5,9,11,3,9,3];
 console.log(arrey.indexOf(3)) // - first 3-element is with index 2. if there is no 15-element in massive, then result is -1
-*/
+
+
 const arr = [3, 6, 'bhnnö', 1, 4];
 function findEver(array) {
     let sum = 0;
@@ -69,3 +70,11 @@ function findEver(array) {
     return sum / length;  
 }
 console.log(findEver(arr));
+
+
+ */
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+function findSum(array) {
+    return array[2] + array[4];
+}
+console.log(findSum(arr));
