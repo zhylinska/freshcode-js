@@ -72,9 +72,20 @@ function findEver(array) {
 console.log(findEver(arr));
 
 
- */
+
 const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 function findSum(array) {
     return array[2] + array[4];
+}
+console.log(findSum(arr));
+*/
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+function findSum(array) {
+    let sum = 0;
+    for (let i = 0; i < array.length; i++) {
+        sum = sum + array[i];
+    }
+    return sum;
 }
 console.log(findSum(arr));
