@@ -40,6 +40,9 @@ console.log(massive11.slice(2, 5));
 const massive12 = ['a', 'b', 'c', 'd'];
 massive12.reverse();
 console.log(massive12.join(''));
+
+  
+
   
 
   
