@@ -271,7 +271,7 @@ console.log(massive1.sort(compareNumbersBigger));
 const massive2 = [5, 7, 1, 8, 12, 4, -3, -2, 0];
 function findEven(item) {
     if (item !== 0) {
-        return item % 2 == 0;
+        return item % 2 === 0;
     }
 }
 const oddNumbers = massive2.filter(findEven);
@@ -298,7 +298,7 @@ console.log(substr);
 //task7 - find sum of odd numbers
 const massive5 = [3, -4, 8, 11, 3, 2];
 function filterOddItem(item) {
-   return item % 2 == 0;
+   return item % 2 === 0;
 }
 const filterMassive = massive5.filter(filterOddItem);
 console.log(filterMassive);
@@ -335,6 +335,18 @@ function makeNameList(catArray) {
 }
 const nameList = catArray.map(makeNameList);
 console.log(nameList);
+
+//task9 - make new massive with elem multiple two
+const arrNative = [1, 12, 90, 5];
+function multTwo(element) {
+    return element * 2
+}
+
+const arrNew = arrNative.map(multTwo);
+console.log(arrNew);
+console.log(arrNative);
+  
+
 
  
 
