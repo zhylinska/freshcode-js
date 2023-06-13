@@ -42,7 +42,8 @@ function palindrome(str2) {
     return 'not palindrome';
 }
     
-const str2 = 'mannam';
+const str2 = 'cfcf';
+
 console.log(palindrome(str2));
   
 
