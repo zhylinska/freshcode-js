@@ -1,24 +1,38 @@
+
+
+
 //task1
-const width = Number(prompt('enter width'));
-const height = Number(prompt('enter height'));
-    alert(`area is ${width*height}`);
 
+const diameter = Number(prompt('enter diameter'));
 
-//task2
-const d = Number(prompt('enter diameter'));
 function circumference() {
-    C = 3.14 * d;
-    return C;
+    if(diameter < 0) {
+        throw new TypeError('diameter should be > 0');
+    }
+  return C = 3.14 * diameter;
 }
 console.log(circumference());
 
+
+
+//task2
+/**
+* @author - iryna
+* @param {number} width of figure >0
+* @param {number} height of figure >0
+*@returns {number} return area of figure
+*/
+
+const width = Number(prompt('enter width'));
+const height = Number(prompt('enter height'));
+alert(`area is ${width*height}`);
 
 //task3
 const d = Number(prompt('enter d'));
 const h = Number(prompt('enter height'));
 alert(`area is ${h*3.14*((d**2)/4)}`);
 
-
+/*
 //task4
 const start = Number(prompt('enter first number'));
 const end = Number(prompt('enter last number'));
@@ -64,4 +78,5 @@ function findX(a, b, c) {
     }
 }
 console.log(findX(a, b, c));
+*/
 
