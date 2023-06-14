@@ -32,7 +32,7 @@ const d = Number(prompt('enter d'));
 const h = Number(prompt('enter height'));
 alert(`area is ${h*3.14*((d**2)/4)}`);
 
-/*
+
 //task4
 const start = Number(prompt('enter first number'));
 const end = Number(prompt('enter last number'));
@@ -44,7 +44,7 @@ function findNumber() {
     }
 }
 console.log(findNumber());
-
+/*
 //task5
 function findFizz() {
     for (let i = 1; i <= 100; ++i) {
