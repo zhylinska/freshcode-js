@@ -72,7 +72,7 @@ class Worker1 {
         return `${this.name}'s salary is ${this.rate*this.days}`;
     }
 }
-//
+// function counting total weight for auto, fuel(according to type), passengers
 class Fuel {
     constructor(volume, density) {
         this.volume = volume;
@@ -84,17 +84,20 @@ class Fuel {
 }
 const benzin = new Fuel(50, 0.9);
 
+const averagePassanger = 80
 
 class Auto {
-    constructor(name, ownWeight, fuel) {
+    constructor(name, ownWeight, fuel, passengersCount) {
         this.name = name;
         this.ownWeight = ownWeight;
         this.fuel = fuel;
+        this.passengersCount = passengersCount;
     }
   getFullWeight() {
-        return this.ownWeight + this.fuel.getWeight();
+        return this.ownWeight + this.fuel.getWeight() + (this.passengersCount * averagePassanger);
   }
 }
-const auto = new Auto('Lexus',4000, benzin);
+const auto = new Auto('Lexus',4000, benzin, 2);
+
 console.log(auto.getFullWeight());
   
