@@ -1,3 +1,4 @@
+/*
 //short option
 class User {
     constructor(name, lastName, age) {
@@ -27,7 +28,7 @@ const  user3 = new User1('john', 'doe', 55);
 const  user4 = new User1('jane', 'doe', 56);
 console.log(user1.getFullName())
 
-/*
+
 //long option
 function User(name, lastname, age) {
     this.name = name;
@@ -42,7 +43,7 @@ function User(name, lastname, age) {
 
 const  user1 = new User('john', 'doe', 55);
 const  user2 = new User('jane', 'doe', 56);
-*/
+
 
 class Worker {
     constructor(name, rate, days) {
@@ -100,4 +101,87 @@ class Auto {
 const auto = new Auto('Lexus',4000, benzin, 2);
 
 console.log(auto.getFullWeight());
-  
+ //
+
+class Worker2 {
+    constructor(name, rate, days) {
+        this.name = name;
+        this.rate = rate;
+        if(typeof rate !== 'number' || typeof days !== 'number') {
+            throw new TypeError('not a number');
+        }
+        this.days = days;
+    }
+    getSalary() {
+        return `${this.name}'s salary is ${this.rate*this.days}`;
+    }
+}
+
+const  worker5 = new Worker2('john', 500, '10');
+const  worker6 = new Worker2('jane', 12, 30);
+console.log(worker5.getSalary())
+//
+*/
+
+/**
+ * @param {number} fuel - amount of fuel in the car
+ * @param {number}  consumption - fuel consumption for 100km
+ * @param {string} brand
+ * @param {string} model
+ * distance - count the fuel in the car after some distance
+ * refuel - count fuel in the car after visiting gas station
+ */
+class Car {
+    constructor(brand, model, year, fuel, consumption) {
+        this.brand = brand;
+        this.model = model;
+        this.year = year;
+        this.fuel = fuel;
+        this.consumption = consumption;
+    }
+    
+    set fuel(value) {
+        if (typeof value !== 'number') {
+            throw new Error('fuel should be numbers');
+        }
+        if(value < 0) {
+            throw new RangeError('fuel should be more than 0');
+        }
+        this._fuel = value;
+    }
+    get fuel() {
+        return this._fuel;
+    }
+    
+    set consumption(value) {
+        if (typeof value !== 'number') {
+            throw new Error('consumption should be numbers');
+        }
+        if(value < 0) {
+            throw new RangeError('consumption should be more than 0');
+        }
+        this._consumption = value;
+    }
+    get consumption() {
+        return this._consumption;
+    }
+
+    drive(distance) {
+        if (distance < 0) {
+            throw new RangeError('distance should be more than 0');
+        }
+        this.fuel = this.fuel - (distance * (this.consumption / 100));
+        return this.fuel;
+    }
+    refuel(amount) {
+        if (amount < 0) {
+            throw new RangeError('amount should be more than 0');
+        }
+        this.fuel = this.fuel + amount;
+        return this.fuel;
+    }
+}
+
+const car1 = new Car('Toyota', 'Camry', 2020, 50, 15);
+console.log(car1.drive(150));
+console.log(car1.refuel(20));
