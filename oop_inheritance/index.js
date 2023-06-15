@@ -79,6 +79,12 @@ class Moderator extends User {
         super(name, surname, null);
         this.isAdmin = isAdmin;
     }
+    setModerator(userId) {
+        console.log('set moderator')
+    }
+    deleteModerator(userId) {
+        console.log('delete moderator');
+    }
 }
 
 const user1= new User('john', 'doe', 59); 
