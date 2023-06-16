@@ -12,6 +12,7 @@ class Human {
         }
         this._name = value;
     }
+
     get name() {
         return this._name;
     }
@@ -22,6 +23,7 @@ class Human {
         }
         this._surname = value;
     }
+
     get surname() {
         return this._surname;
     }
@@ -35,6 +37,7 @@ class Human {
         }
         this._yearOfBirth = value;
     }
+
     get yearOfBirth() {
         return this._yearOfBirth;
     }
@@ -48,6 +51,7 @@ class Human {
         }
         this._gender = value;
     }
+
     get gender() {
         return this._gender;
     }
@@ -55,8 +59,7 @@ class Human {
     greeting() {
         if (this.gender === 'male') {
             return `Hello, Mr.${this.name} ${this.surname}`;
-        }
-        else if (this.gender === 'female') {
+        } else if (this.gender === 'female') {
             return `Hello, Mrs. ${this.name} ${this.surname}`;
         }
     }
@@ -68,6 +71,18 @@ class Student extends Human {
         this.averageScore = averageScore;
     }
 
+    set averageScore(value) {
+        if (this.averageScore > 100) {
+            throw RangeError('averageScore should be >= 100')
+        }
+        this._averageScore = value;
+    }
+
+    get averageScore() {
+        return this._averageScore;
+    }
+
+
     isExcellentStudent() {
         if (this.averageScore >= 90) {
             return true;
@@ -77,6 +92,10 @@ class Student extends Human {
     }
 }
 
-const stud = new Student('Tom', 'Sawyer', 2005, 'male', 90);
-console.log(stud.isExcellentStudent());
-console.log(stud.greeting());
+
+const stud1 = new Student('Tom', 'Sawyer', 2005, 'male', 90);
+const stud2 = new Student('Tony', 'Sawyer', 2007, 'male', 75);
+const stud3 = new Student('Tom', 'Saw', 2005, 'male', 100);
+
+console.log(stud1.isExcellentStudent());
+console.log(stud2.greeting());
