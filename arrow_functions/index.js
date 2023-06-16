@@ -1,5 +1,5 @@
 'use strict';   
-/*//first line in js file
+//first line in js file
 console.log(this);
 
 function test() {      //function declaration
@@ -25,7 +25,7 @@ function sum() {
         console.log(this);
     }
 }
-*/
+
 
 const newspaper = {
     title: 'newspapers name',
@@ -87,4 +87,20 @@ const t2 = () => {
     console.log(arguments);// => functions have no arguments
 }
 t2(); // it doesn't work
+
+
+function sum2 (a, b, ...restArguments) {
+    console.log(restArguments);
+    return a + b;
+}
+sum2(1, 2);
+console.log(sum(1, 2, 3, 4));
+
+
+    
+  
+
+
+
+
 

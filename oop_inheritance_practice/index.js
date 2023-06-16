@@ -56,7 +56,7 @@ class Human {
         if (this.gender === 'male') {
             return `Hello, Mr.${this.name} ${this.surname}`;
         }
-        if (this.gender === 'female') {
+        else if (this.gender === 'female') {
             return `Hello, Mrs. ${this.name} ${this.surname}`;
         }
     }

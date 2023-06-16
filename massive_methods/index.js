@@ -236,8 +236,6 @@ function filterAdults(users) {
     return users.age >= 18;
 }
 const adultUsers = users.filter(filterAdults);
-
-
 function makeFullName(adultUsers) {
     return {
         fullname: `${adultUsers.name} ${adultUsers.surname}`,
@@ -247,7 +245,6 @@ function makeFullName(adultUsers) {
 }
 const fullName = adultUsers.map(makeFullName);
 console.log(fullName);
-
 
 
 //task2 - make order from small to big
@@ -281,7 +278,7 @@ console.log(oddNumbers);
 //task5 - make sum
 const massive3 = [2, 2, 7, 3, 8, -1, 5, 3];
 
-const sum = massive3.reduce(function (sum, item) {
+const sum = massive3.reduce(function (sum, item) {  
     return sum + item;
 }, 0);
 console.log(sum);
@@ -289,15 +286,15 @@ console.log(sum);
 
 //task6 - substract each element
 const massive4 = [1, -4, 2, 10, 2, -3];
-const substr = massive4.reduce(function (substr, item) {
+const substr = massive4.reduce(function (substr, item) { 
     return substr - item;
 }, 0);
 console.log(substr);
 
 
 //task7 - find sum of odd numbers
-const massive5 = [3, -4, 8, 11, 3, 2];
-function filterOddItem(item) {
+const massive5 = [3, -4, 8, 11, 3, 2];//const sum = massive3.reduce((oddSum, item) => { if(item % 2 === 0) { oddSum + item; }  return oddSum }, 0);
+/*function filterOddItem(item) {
    return item % 2 === 0;
 }
 const filterMassive = massive5.filter(filterOddItem);
@@ -305,11 +302,12 @@ console.log(filterMassive);
 
 const oddSum = filterMassive.reduce(function (oddSum, item) {
         return oddSum + item;
-}, 0);
+}, 0); */
+const sum = massive3.reduce((oddSum, item) => { if(item % 2 === 0) { oddSum + item }  return oddSum }, 0);
 console.log(oddSum);  
 
 
-//task8 - make only names massive
+//task8 - make only names massive. reverse result
 const catArray = [
     {
         name: 'Murzik',
@@ -333,7 +331,8 @@ const catArray = [
 function makeNameList(catArray) {
     return catArray.name;
 }
-const nameList = catArray.map(makeNameList);
+const nameList = catArray.map(makeNameList).reverse();// const nameList = catArray.map((catArray) => { return catArray.name })
+
 console.log(nameList);
 
 //task9 - make new massive with elem multiple two

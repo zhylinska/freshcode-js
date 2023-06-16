@@ -89,7 +89,7 @@ class Moderator extends User {
 
 const user1= new User('john', 'doe', 59); 
 const mod = new Moderator('tom', 'ban', 58);
-const admin = new Admin('jack', 'bin', 60);
+const admin = new Admin('jack', 'bin', true);
 
   
 

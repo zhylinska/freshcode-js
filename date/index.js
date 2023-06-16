@@ -142,7 +142,7 @@ class Car {
     
     set fuel(value) {
         if (typeof value !== 'number') {
-            throw new Error('fuel should be numbers');
+            throw new TypeError('fuel should be numbers');
         }
         if(value < 0) {
             throw new RangeError('fuel should be more than 0');
@@ -155,7 +155,7 @@ class Car {
     
     set consumption(value) {
         if (typeof value !== 'number') {
-            throw new Error('consumption should be numbers');
+            throw new TypeError('consumption should be numbers');
         }
         if(value < 0) {
             throw new RangeError('consumption should be more than 0');
