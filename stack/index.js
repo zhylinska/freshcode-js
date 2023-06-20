@@ -39,9 +39,35 @@ class Stack {
         }
     }
     pick() {
-        return this[`${this.size }`]
+        return this[`${this.size - 1}`]
     }
 }
 const myStack = new Stack(4);
 
-////////
+////////check balance of brackets
+//(a+b)*(c-d) true
+//(a+b)*(c-d)) false
+
+function checkBalanceBrackets(expression) {
+    const stack = new Stack(15); //make stack with 15 el
+     for(let i = 0; i < expression.length; i++) {
+         const char = expression[i];
+         if(char === '(' || char === '{' || char === '[') {
+             stack.push(char);
+         }
+         else if(char  === ')' || char === '}' || char === ']') {
+             if(stack.isEmpty === true) {
+                 return false;
+             }
+             const top = stack.pop();
+             
+             if
+             ((char === ')' && top !== '(') || (char === ']' && top !== '[') || (char === '}' && top !== '{') )
+             {
+                 return false;
+             }
+         }
+    }
+     return stack.isEmpty;
+}
+
