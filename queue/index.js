@@ -19,6 +19,20 @@ class Queue {
         }
         throw new Error('queue is empty')
     }
-
 }
 const queue = new Queue();
+/////
+const vocabulary = new Map();
+vocabulary.set('cat', 'кіт');
+vocabulary.set('dog', 'собака');
+
+function translater(str, vocabulary) {
+  const arrayWords = str.toLowerCase().trim().split(' '); 
+  const translateArray = arrayWords.map((word) => {
+      if(vocabulary.has(word) === true) {
+          return vocabulary.get(word)
+      }
+      return word;
+  })
+    return translateArray.join(('-'));
+}
