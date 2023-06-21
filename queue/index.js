@@ -36,3 +36,16 @@ function translater(str, vocabulary) {
   })
     return translateArray.join(('-'));
 }
+/////make schedule
+const schedule = new Map();
+schedule.set('monday', ['art', 'nature']);
+schedule.set('tuesday', ['music']);
+schedule.set('wednesday', ['PE', 'math']);
+schedule.set('thursday', ['math', 'art']);
+schedule.set('friday', ['geography', 'music']);
+
+  
+
+console.log(schedule.get('monday'));
+ ///// 
+   
