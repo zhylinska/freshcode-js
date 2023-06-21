@@ -44,8 +44,20 @@ schedule.set('wednesday', ['PE', 'math']);
 schedule.set('thursday', ['math', 'art']);
 schedule.set('friday', ['geography', 'music']);
 
-  
 
+///certain day schedule
 console.log(schedule.get('monday'));
- ///// 
+
+
+////find if there is schedule for day
+console.log(schedule.has('monday'));
+
+
+ /////how many working days are there
+console.log(schedule.size);
+
+
+
+
+
    
