@@ -116,4 +116,16 @@ function checkAnagramm(str1, str2) {
 console.log(checkAnagramm('rama', 'marÄ'));
 
 
+
+/// array without doubles
+
+
+const arrayWithDoubles = [1, 2, 3, 3, 4, 1, 7]
+function  arrayWithoutDoubles(arr) {
+    const set = new Set(arr);
+    const arrFromSet = [...set.values()];
+    return arrFromSet;
+}
+
+
    
