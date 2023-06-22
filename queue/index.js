@@ -1,3 +1,5 @@
+/*
+////queue
 class Queue {
     constructor() {
         this._head = 0;
@@ -21,7 +23,7 @@ class Queue {
     }
 }
 const queue = new Queue();
-/////
+/////Map
 const vocabulary = new Map();
 vocabulary.set('cat', 'кіт');
 vocabulary.set('dog', 'собака');
@@ -57,7 +59,61 @@ console.log(schedule.has('monday'));
 console.log(schedule.size);
 
 
+///////////////
+const user = {
+    name: 'Alex',
+    firstName: 'Doe',
+    id: 1
+}
 
+const user2 = {
+    name: 'John',
+    firstName: 'Doe',
+    id: 2
+}
+const johnMessages = ['hello', 'How are you?'];
+const alexMessages = ['hi!', 'Im fine!'];
+const chat = new Map();
+
+chat.set(user.name, johnMessages);
+chat.set(user2.name, alexMessages);
+
+function createMessage(userName, newMessage, chat) {
+   const userMessages = chat.get(userName);
+   userMessages.push(newMessage);
+}
+
+console.log(chat.get('John'));
+console.log(chat);
+
+//////////
+*/
+
+function checkAnagramm(str1, str2) {
+    str1 = str1.toLowerCase();
+    str2 = str2.toLowerCase();
+    const map1 = new Map();
+    const map2 = new Map();
+
+    for (let letter of str1) {
+        map1.set(letter, map1.has(letter) ? map1.get(letter) + 1 : 1)
+    }
+    for (let letter of str2) {
+        map2.set(letter, map2.has(letter) ? map2.get(letter) + 1 : 1)
+    }
+
+    if (map1.size !== map2.size) {
+        return false
+    }
+    map1.forEach((value, key) => {
+        if(map2.get(key) !== value) {
+            return false
+        }
+    })
+    return  true
+}
+
+console.log(checkAnagramm('rama', 'marÄ'));
 
 
    
