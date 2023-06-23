@@ -5,7 +5,7 @@ function  counter() {
     return i;
 }
 ///
- */
+ 
 function makeCounter() {
    let i = 0;
     return function() {
@@ -13,4 +13,12 @@ function makeCounter() {
     }
 }
 const  fn = makeCounter();
+///
+*/
+
+function makeAdder(first) {
+    return function(second) {
+        return first + second;
+    }
+}
 ///
