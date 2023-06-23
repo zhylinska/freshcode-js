@@ -14,7 +14,7 @@ function makeCounter() {
 }
 const  fn = makeCounter();
 ///
-*/
+
 
 function makeAdder(first) {
     return function(second) {
@@ -22,3 +22,15 @@ function makeAdder(first) {
     }
 }
 ///
+*/
+function isCorrectPassword(truePassword) {
+    return function (checkedPassword) {
+        if(checkedPassword === truePassword) {
+            return true;
+        }
+        else { 
+            return false
+        }
+    }
+} 
+const checkPassword = isCorrectPassword(112);
