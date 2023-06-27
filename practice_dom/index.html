@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+</head>
+<body>
+<h1>currency converter</h1>
+<form id="currencyConverter">
+    <label>
+        sum for convertation:
+        <input type="number" id="sum"  min="1" required>
+    </label>
+    <label>
+        choose currency:
+        <select id="currency" required>
+            <option value="USD">usd</option>
+            <option value="Eur">eur</option>
+        </select>
+    </label>
+    <button type="submit">convert</button>
+    <div id="result"></div>
+</form>
+
+
+<script src="index.js"></script>
+</body>
+</html>
