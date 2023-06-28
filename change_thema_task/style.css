@@ -6,3 +6,8 @@
     background: white;
     color: black;
 }
+
+#root {
+    border: 3px solid gray;
+    padding: 2rem;
+}
