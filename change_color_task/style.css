@@ -1,0 +1,15 @@
+.box {
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid black;
+}
+.red-little {
+    background: red;
+    width: 3rem;
+    height: 3rem;
+}
+.green-big {
+    background-attachment: green;
+    width: 4rem;
+    height: 4rem;
+}
