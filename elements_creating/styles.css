@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#root {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card_wrapper {
+    text-align: center;
+    border: 2px solid black;
+    margin: 1rem;
+    padding: 1.5rem;
+
+}
+
+.card_img {
+    width: 15rem;
+    height: 15rem;
+    object-fit: cover;
+}
+
+.user_name {
+    font-size: 3rem;
+}
+
+.description {
+    font-size: 2rem;
+}
