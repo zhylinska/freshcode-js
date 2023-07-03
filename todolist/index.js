@@ -14,6 +14,7 @@ function addTask() {
     removeBtn.classList.add('remove');
     task.append(removeBtn);
     console.log(task);
+    
     list.append(task);
     input.value = '';
 }
