@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.todo_list {
+    background-color: grey;
+    max-width: 800px;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+
+}
+#enter_task, #add_task {
+    padding: 1rem;
+    margin: 2rem;
+    border-radius: 5px;
+    border: transparent;
+}
+#add_task:hover, .remove:hover {
+    background-color: darkgrey;
+}
+.ul {
+    list-style: none;
+    padding: 2rem;
+}
+li {
+    padding-top: 2rem;
+    font-size: 1.5rem;
+}
+.remove {
+   margin-left: 2rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: transparent;
+}
