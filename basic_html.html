@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const str = 'dima';
+    let num = 1;
+    let num2 = 4;
+    let sum = num + num2;
+    let sub2 = num - num2;
+    let sub3 = num * num2;
+    let sub4 = num / num2;
+    if(sum > 5) {
+        console.log(sum);
+    }
+    else  if(sum < 4) {
+        console.log(sum2);
+    }
+    for(let i = 0; i <= 10; i++ ) {
+        console.log(i);
+    }
+    const mas = ['apple', 'banana', 'orange'];
+    for(let i = 0; i < mas.length; i++) {
+        console.log(mas[i]);
+    }
+    function print(num) {
+      let sum = 0;
+       sum = num + 2;
+        console.log(sum);
+    }
+    print(3);
+
+  function fun(print) {
+      console.log(print())
+    }
+    fun(()=>{
+        let h=8;
+        return h;
+    })
+    function two(str, srt2) {
+        return()=> console.log(str, srt2)
+    }
+    const f = two('ira', 'dima');
+  f()
+
+<!--task1-->
+  const squareNumber = (number) => number * number;
+    console.log(squareNumber(5));
+
+
+  function squareNumber2(number) {
+      return number * number;
+  }
+    console.log(squareNumber2(4))
+
+<!--task2-->
+const calculateRectangleArea = (length, width) => length * width;
+    console.log(calculateRectangleArea(4,2));
+
+function calculateRectangleArea2(length, width) {
+    return length * width;
+}
+    console.log(calculateRectangleArea2(1, 5))
+
+<!--task3-->
+    const convertCelsiusToFahrenheit = ((celsius) => {
+    let fahrenheit = 0;
+        fahrenheit = celsius * (9 / 5) + 32;
+        return fahrenheit;
+    });
+    console.log(convertCelsiusToFahrenheit(10));
+
+function convertCelsiusToFahrenheit2(celsius) {
+    let fahrenheit = 0;
+    fahrenheit = celsius * (9 / 5) + 32;
+    return fahrenheit;
+}
+    console.log(convertCelsiusToFahrenheit2(15))
+
+
+<!--task4-->
+const evenNumber = ((number) => {
+    if(number % 2 === 0) {
+        return true;
+    }
+    else {
+        return false;
+    }
+})
+    console.log(evenNumber(5));
+
+
+function evenNumber2(number) {
+    if(number % 2 === 0) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+    console.log(evenNumber2(10));
+
+<!--task5-->
+    const calculateArraySum = ((array) => {
+        let sum = 0;
+    for(let i = 0; i < array.length; i++) {
+
+        sum = sum + array[i];
+    }
+        return sum;
+    });
+    console.log(calculateArraySum([7, 3, 3]))
+
+
+    function calculateArraySum2(array) {
+        let sum = 0;
+        for(let i = 0; i < array.length; i++) {
+            sum = sum + array[i];
+        }
+        return sum;
+    }
+    console.log(calculateArraySum2([1, 2]))
+
+
+</script>
+</body>
+</html>
