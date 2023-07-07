@@ -54,7 +54,5 @@ function displayWeather(weatherData) {
     
     const section = document.querySelector('.wrapper');
     section.append(article);
-
-
 }
     
