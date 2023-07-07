@@ -1,6 +1,7 @@
 
 const button = document.getElementById('add_task');
 button.addEventListener('click', addTask);
+
 function addTask() {
     console.log(button);
     const input = document.getElementById('enter_task');
@@ -9,15 +10,21 @@ function addTask() {
     console.log(list)
     const task = document.createElement('li');
     task.innerHTML = input.value;
+
+
+
+
+
+
     const removeBtn = document.createElement('button');
     removeBtn.innerHTML = 'remove';
     removeBtn.classList.add('remove');
     task.append(removeBtn);
     console.log(task);
-    
     list.append(task);
     input.value = '';
 }
+
 const ul = document.getElementById('list');
 ul.addEventListener('click', deleteTask);
 function deleteTask(event) {
@@ -28,8 +35,9 @@ function deleteTask(event) {
         el.parentNode.remove();
         console.log(el)
     }
-    
 }
+
+
 
 
 

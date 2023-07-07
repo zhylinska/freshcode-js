@@ -14,7 +14,7 @@
 
 #enter_task, #add_task {
     padding: 1rem;
-    margin: 2rem;
+    margin: 2rem 3rem 0 3rem;
     border-radius: 5px;
     border: transparent;
 }
@@ -22,7 +22,13 @@
 #add_task:hover, .remove:hover {
     background-color: darkgrey;
 }
-
+#add_task {
+    width: max-content;
+    margin: 2rem auto;
+    padding: 1rem;
+    border-radius: 5px;
+    border: transparent;
+}
 .ul {
     list-style: none;
     padding: 2rem;
@@ -31,6 +37,7 @@
 li {
     padding-top: 2rem;
     font-size: 1.5rem;
+    text-align: center;
 }
 
 .remove {
